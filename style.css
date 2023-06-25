@@ -1,0 +1,231 @@
+:root {
+  /* Colors */
+  --color-primary-cyan: hsl(179, 62%, 43%);
+  --color-primary-light-cyan: hsl(179, 47%, 52%);
+  --color-primary-bright-yellow: hsl(71, 73%, 54%);
+  --color-neutral-light-gray: hsl(204, 43%, 93%); 
+  --color-neutral-grayish-blue: hsl(218, 22%, 67%);
+
+  /* Font */
+  --font-body: 'Karla', sans-serif;
+
+  /* Font weights */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+}
+
+
+/* CSS Reset */
+/* https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding, and reset font property to that of root element for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-block-size: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Utility classes */
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* General styling */
+body {
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-regular);
+  font-size: 1rem;
+  color: white;
+  background-color: var(--color-neutral-light-gray);
+  display: grid;
+  place-items: center;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  margin-block-end: 1rem;
+}
+
+@media (min-width: 40em) {
+  h2 {
+    font-size: 1.375rem;
+  }
+}
+
+/* Main  content */
+main {
+  padding-block: 4.375rem;
+}
+
+.content-wrapper {
+  inline-size: min(84%, 41rem);
+  margin-inline: auto;
+}
+
+.community-section {
+  padding: 1.875rem 1.5rem;
+  background-color: white;
+  border-radius: .5rem .5rem 0 0; 
+}
+
+@media (min-width: 40em) {
+  .community-section {
+    padding: 2.25rem 2.125rem;
+  }
+}
+
+.community-section-title {
+  font-size: 1.25rem;
+  color: var(--color-primary-cyan);
+  margin-block-end: 1.375rem;
+}
+
+@media (min-width: 40em) {
+  .community-section-title {
+    font-size: 1.625rem;
+  }
+}
+
+.community-section-subtitle {
+  color: var(--color-primary-bright-yellow);
+  font-weight: var(--font-weight-bold);
+  margin-block-end: 1.125rem;
+}
+
+@media (min-width: 40em) {
+  .community-section-subtitle {
+    font-size: 1.25rem;
+    margin-block-end: .875rem;
+  }
+}
+
+.community-section-description {
+  color: var(--color-neutral-grayish-blue);
+  line-height: 1.65;
+}
+
+.even-columns {
+  display: grid;
+}
+
+@media (min-width: 40em) {
+  .even-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.subscription-section,
+.benefits-section {
+  padding: 1.625rem 1.5rem;
+}
+
+@media (min-width: 40em) {
+  .subscription-section,
+  .benefits-section {
+    padding: 2.125rem;
+  }
+}
+
+.subscription-section {
+  background-color: var(--color-primary-cyan);
+}
+
+@media (min-width: 40em) {
+  .subscription-section {
+    border-bottom-left-radius: .5rem;
+  }
+}
+
+.flex-group {
+  display: flex;
+  gap: .75rem;
+  align-items: center;
+  margin-block-end: .75rem;
+}
+
+.subscription-price {
+  font-size: 1.875rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.subscription-duration {
+  color: var(--color-neutral-light-gray);
+}
+
+.subscription-description {
+  margin-block-end: 1.375rem;
+}
+
+.button {
+  cursor: pointer;
+  width: 100%;
+  background-color: var(--color-primary-bright-yellow);
+  color: white;
+  border: 0;
+  height: 3.125rem;
+  border-radius: .5rem;
+  font-weight: var(--font-weight-bold);
+  transition: all 0.3s ease;
+}
+
+.button:is(:hover, :focus-visible) {
+  background-color: white;
+  color: var(--color-primary-bright-yellow);
+}
+
+.benefits-section {
+  background-color: var(--color-primary-light-cyan);
+  border-bottom-right-radius: .5rem;
+}
+
+@media (width < 40em) {
+  .benefits-section {
+    border-bottom-left-radius: .5rem;
+  }
+}
+
+.benefits-section p {
+  line-height: 1.75;
+  color: var(--color-neutral-light-gray);
+}
+
+.attribution { 
+  font-size: 11px; 
+  color: var(--color-primary-cyan);
+  text-align: center; 
+  margin-block-end: .5rem;
+}
+
+.attribution a { 
+  color: var(--color-neutral-grayish-blue); 
+}
