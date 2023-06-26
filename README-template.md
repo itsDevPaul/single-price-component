@@ -16,7 +16,7 @@ Users should be able to:
 
 
 ### Links
-- Live Site URL: (https://single-price-grid-component-build.netlify.app/)
+- Live Site URL: https://single-price-grid-component-build.netlify.app/
 
 ### Built with
 
