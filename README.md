@@ -12,11 +12,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![A screenshot of my project](screenshot.png)
 
 
 ### Links
-- Live Site URL: https://single-price-grid-component-build.netlify.app/
+- Live Site URL: [Visit my project's live site!](https://single-price-grid-component-build.netlify.app/)
 
 ### Built with
 
